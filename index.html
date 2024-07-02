@@ -8,9 +8,8 @@
         <body>
             <h2>Hello world! this is a website!</h2>
             <h1 style="color: blue;">
+                <div class="website-counter">Website visit count: <span id="counter-value"></span></div>
                 I am programmer penguin <br>
-                2nd line <br>
-                3rd line <br>
             <button onclick="window.open('https://www.youtube.com/channel/UCnMoSQKpRVbL2jVzJVJFhVA');">button to my main channel</button>
             <button onclick="window.open('https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran');">my 2nd channel</button> <br>
             <a href="https://www.youtube.com/channel/UCnMoSQKpRVbL2jVzJVJFhVA" target="_blank">main channel</a>
@@ -29,5 +28,21 @@
                 <iframe width="70%" height="auto" src="https://www.youtube.com/embed/J_-J42ciOqg" title="Penguin missile" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </h6>
         </body>
+        <script>
+            var visitCount = localStorage.getItem("page_view") || 1;
+
+            // Increment the count on each visit
+            visitCount = Number(visitCount) + 1;
+            localStorage.setItem("page_view", visitCount);
+
+            // Display the count
+            document.getElementById("counter-value").innerHTML = visitCount;
+
+            // Reset the counter
+            function resetCounter() {
+                localStorage.removeItem("page_view");
+                document.getElementById("counter-value").innerHTML = 1;
+            }
+        </script>
     </head>
 </html> 
