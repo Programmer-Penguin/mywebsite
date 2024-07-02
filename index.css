@@ -26,3 +26,34 @@ input
     background-color: black;
     color: white;
 }
+.video-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    margin: 0; /* Remove any margin */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    /* For screens wider than 768px (PC) */
+    .video-container iframe {
+        width: 20%;
+        height: auto
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* For screens up to 767px (mobile) */
+    .video-container iframe {
+        width: 70%;
+        height: auto;
+    }
+}
