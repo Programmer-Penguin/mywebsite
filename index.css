@@ -75,11 +75,11 @@ input
 }
 .rainbow_text_animated 
 {
-    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    background: linear-gradient(to right, red, orange, yellow, #00ff00, blue, indigo, violet);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    animation: rainbow_animation 10s ease-in-out infinite;
+    animation: rainbow_animation 6s infinite;
     background-size: 400% 100%;
 }
 
@@ -92,4 +92,12 @@ input
     50% {
         background-position: 100% 0;
     }
+}
+
+.test_button
+{
+    font-size: 50%;
+    color: white;
+    border-color: grey;
+    background-color: black;
 }
