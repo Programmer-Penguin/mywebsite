@@ -5,45 +5,44 @@
         <meta name="viewport" content="initial-scale=1, width=device-width">
         <link href="index.css" rel="stylesheet">
         <title>hello, title</title>
-        <body>
-            <h2>Hello world! this is a website!</h2>
-            <h1 style="color: blue;">
-                <div class="website-counter">you have visited this site <span id="counter-value"></span> times</div>
-                I am programmer penguin <br>
-            <button onclick="window.open('https://www.youtube.com/channel/UCnMoSQKpRVbL2jVzJVJFhVA');">button to my main channel</button>
-            <button onclick="window.open('https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran');">my 2nd channel</button> <br>
-            <a href="https://www.youtube.com/channel/UCnMoSQKpRVbL2jVzJVJFhVA" target="_blank">main channel</a>
-            <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran" target="_blank">2nd channel</a><br>
-            <img src="https://yt3.googleusercontent.com/dB5TjcPjrI9p-2RmD891zNo_apszdAkTUfBtpZRYL16ThXUNXQzIVclr8A8o5_09vs-HG42i3Q=s900-c-k-c0x00ffffff-no-rj" alt="Description of the image" width="180" height="160">
-            <form action="https://www.google.com/search" method="get" target="_blank">
-                <input name="q" placeholder="search google" autofocus autocomplete="off">
-                <button type="submit">Search</button>
-            </form>
-            <form action="https://www.youtube.com/results?" method="get" target="_blank">
-                <input name="search_query" placeholder="search youtube" autofocus autocomplete="off">
-                <button type="submit">Search</button>
-            </form>
-            <button onclick="resetCounter()">Reset The View Count</button>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/J_-J42ciOqg"></iframe>
-                </div>
-            </h1>
-        </body>
-        <script>
-            var visitCount = localStorage.getItem("page_view") || 1;
-
-            // Increment the count on each visit
-            visitCount = Number(visitCount) + 1;
-            localStorage.setItem("page_view", visitCount);
-
-            // Display the count
-            document.getElementById("counter-value").innerHTML = visitCount;
-
-            // Reset the counter
-            function resetCounter() {
-                localStorage.removeItem("page_view");
-                document.getElementById("counter-value").innerHTML = 1;
-            }
-        </script>
     </head>
+    <body>
+        <h1 style="color: blue;">
+            <div class="website-counter">you have visited this site <span id="counter-value"></span> times</div>
+            I am programmer penguin <br>
+        <button onclick="window.open('https://www.youtube.com/channel/UCnMoSQKpRVbL2jVzJVJFhVA');">button to my main channel</button>
+        <button onclick="window.open('https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran');">my 2nd channel</button> <br>
+        <a href="https://www.youtube.com/channel/UCnMoSQKpRVbL2jVzJVJFhVA" target="_blank">main channel</a>
+        <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran" target="_blank">2nd channel</a><br>
+        <img src="https://yt3.googleusercontent.com/dB5TjcPjrI9p-2RmD891zNo_apszdAkTUfBtpZRYL16ThXUNXQzIVclr8A8o5_09vs-HG42i3Q=s900-c-k-c0x00ffffff-no-rj" alt="Description of the image" width="180" height="160">
+        <form action="https://www.google.com/search" method="get" target="_blank">
+            <input name="q" placeholder="search google" autofocus autocomplete="off">
+            <button type="submit">Search</button>
+        </form>
+        <form action="https://www.youtube.com/results?" method="get" target="_blank">
+            <input name="search_query" placeholder="search youtube" autofocus autocomplete="off">
+            <button type="submit">Search</button>
+        </form>
+        <button onclick="resetCounter()">Reset The View Count</button>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/J_-J42ciOqg"></iframe>
+            </div>
+        </h1>
+    </body>
+    <script>
+        var visitCount = localStorage.getItem("page_view") || 1;
+
+        // Increment the count on each visit
+        visitCount = Number(visitCount) + 1;
+        localStorage.setItem("page_view", visitCount);
+
+        // Display the count
+        document.getElementById("counter-value").innerHTML = visitCount;
+
+        // Reset the counter
+        function resetCounter() {
+            localStorage.removeItem("page_view");
+            document.getElementById("counter-value").innerHTML = 1;
+        }
+    </script>
 </html> 
