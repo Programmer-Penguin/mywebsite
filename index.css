@@ -3,6 +3,7 @@ a
     color: red;
     text-decoration: none;
 }
+
 a:hover
 {
     text-decoration: underline;
@@ -26,7 +27,9 @@ input
     background-color: black;
     color: white;
 }
-.video-container {
+
+.video-container 
+{
     position: relative;
     overflow: hidden;
     width: 100%;
@@ -34,7 +37,8 @@ input
     margin: 0; /* Remove any margin */
 }
 
-.video-container iframe {
+.video-container iframe 
+{
     position: absolute;
     top: 10%;
     left: 50%;
@@ -43,7 +47,8 @@ input
     height: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) 
+{
     /* For screens wider than 768px (PC) */
     .video-container iframe {
         width: 20%;
@@ -51,10 +56,40 @@ input
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) 
+{
     /* For screens up to 767px (mobile) */
     .video-container iframe {
         width: 70%;
         height: auto;
+    }
+}
+
+.rainbow 
+{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 32px;
+    font-family: monospace;
+    letter-spacing: 5px;
+}
+.rainbow_text_animated 
+{
+    background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 10s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation 
+{
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
     }
 }
