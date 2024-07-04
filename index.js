@@ -32,7 +32,7 @@ async function FizzBuzz() {
         }
         // Append the output to an existing element (e.g., a <div> with id "fizzbuzz_text")
         document.getElementById("fizzbuzz_text").innerHTML += output + "<br>"; // Add a line break
-        await sleep(1);
+        await sleep(70);
         window.scrollTo(0, document.body.scrollHeight + 10);
     }
 }
