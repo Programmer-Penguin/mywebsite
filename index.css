@@ -97,7 +97,7 @@ input
 .test_button
 {
     font-size: 50%;
-    color: white;
-    border-color: grey;
+    color: rgb(0, 128, 255);
+    border-color: rgb(9, 12, 55);
     background-color: black;
 }

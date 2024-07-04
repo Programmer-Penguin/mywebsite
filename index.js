@@ -1,11 +1,12 @@
-var visitCount = localStorage.getItem("page_view") || 1;
+const { sleep } = require('util')
+var visitCount = localStorage.getItem("page_view") || 1
 
 // Increment the count on each visit
-visitCount = Number(visitCount) + 1;
-localStorage.setItem("page_view", visitCount);
+visitCount = Number(visitCount) + 1
+localStorage.setItem("page_view", visitCount)
 
 // Display the count
-document.getElementById("counter-value").innerHTML = visitCount;
+document.getElementById("counter-value").innerHTML = visitCount
 
 // Reset the counter
 function resetCounter()
@@ -13,11 +14,7 @@ function resetCounter()
     localStorage.removeItem("page_view");
     document.getElementById("counter-value").innerHTML = 1;
 }
-const sleep = async (milliseconds) => {
-    await new Promise(resolve => {
-        return setTimeout(resolve, milliseconds)
-    });
-};
+
 
 // FizzBuzz function
 function FizzBuzz()
@@ -28,6 +25,7 @@ function FizzBuzz()
         if (i % 3 == 0) {output += "Fizz";}
         if (i % 5 == 0) {output += "Buzz";}
         else {output = i}
+        // document.getElementById("fizzbuzz_text").innerHTML = output
         console.log(output)
         sleep(1000)
     }
