@@ -28,7 +28,7 @@ function FizzBuzz()
         if (i % 3 == 0) {output += "Fizz";}
         if (i % 5 == 0) {output += "Buzz";}
         else {output = i}
-        document.getElementById("fizzbuzz_text").innerHTML = output
+        console.log(output)
         sleep(1000)
     }
 }
