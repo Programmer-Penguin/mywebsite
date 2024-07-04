@@ -1,6 +1,6 @@
 a
 {
-    color: red;
+    color: green;
     text-decoration: none;
 }
 
@@ -13,7 +13,7 @@ a:hover
 button
 {
     font-size: 50%;
-    color: rgb(0, 128, 255);
+    color: blue;
     border-color: rgb(9, 12, 55);
     background-color: black;
 }
@@ -96,3 +96,8 @@ input
     }
 }
 
+.penguin_pfp
+{
+    border: 5px solid blue;
+    border-radius: 35%;
+}
