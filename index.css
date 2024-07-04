@@ -12,8 +12,10 @@ a:hover
 
 button
 {
+    font-size: 50%;
+    color: rgb(0, 128, 255);
+    border-color: rgb(9, 12, 55);
     background-color: black;
-    color: white;
 }
 
 body
@@ -79,7 +81,7 @@ input
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    animation: rainbow_animation 6s infinite;
+    animation: rainbow_animation 1s infinite;
     background-size: 400% 100%;
 }
 
@@ -94,10 +96,3 @@ input
     }
 }
 
-.test_button
-{
-    font-size: 50%;
-    color: rgb(0, 128, 255);
-    border-color: rgb(9, 12, 55);
-    background-color: black;
-}
