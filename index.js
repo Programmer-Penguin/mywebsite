@@ -31,8 +31,13 @@ async function FizzBuzz() {
             output = i;
         }
         // Append the output to an existing element (e.g., a <div> with id "fizzbuzz_text")
-        document.getElementById("fizzbuzz_text").innerHTML += output + "<br>"; // Add a line break
+        document.getElementById("fizzbuzz_text").innerHTML += output + "<br><br>"; // Add a line break
         await sleep(70);
         window.scrollTo(0, document.body.scrollHeight + 10);
     }
+
 }
+document.querySelector('form').addEventListener('submit', function(event) {
+    alert('hello, ' + document.querySelector('#name').value);
+    event.preventDefault();
+});
