@@ -99,7 +99,7 @@ function change_theme()
             button.style.color = 'blue';
             button.style.backgroundColor = 'black';
         });
-
+ 
         elements[3].forEach(function(link)
         {
             link.style.color = "red";
