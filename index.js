@@ -3,6 +3,7 @@ var elements = [];
 elements.push(document.querySelector('body'));
 elements.push(document.querySelector('h1'));
 elements.push(document.querySelectorAll("button"));
+elements.push(document.querySelectorAll("a"));
 
 
 var radio_buttons = [];
@@ -77,6 +78,12 @@ function change_theme()
             button.style.color = 'black';
             button.style.backgroundColor = 'white';
         });
+
+
+        elements[3].forEach(function(link)
+        {
+            link.style.color = "#2a4b8d";
+        });
         document.getElementsByClassName("theme_submit_button")[0].style.color = 'grey';
         document.getElementById("welcome_sign").innerHTML = "";
         document.getElementsByClassName("penguin_pfp")[0].style.border = "5px solid black";
@@ -92,7 +99,13 @@ function change_theme()
             button.style.color = 'blue';
             button.style.backgroundColor = 'black';
         });
-        document.querySelector('button').style.color = 'grey';
+
+        elements[3].forEach(function(link)
+        {
+            link.style.color = "red";
+        });
+        document.getElementsByClassName("theme_submit_button")[0].style.color = 'grey';
+        document.getElementsByClassName("penguin_pfp")[0].style.border = "5px solid blue";
     }
     // else idk:
     else
