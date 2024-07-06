@@ -101,7 +101,8 @@ input
     border: 5px solid blue;
     border-radius: 35%;
 }
-.theme_menu {
+.theme_menu 
+{
     color: grey;
     text-align: left;
     font-size: calc(15px + 0.390625vw);
