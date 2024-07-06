@@ -8,17 +8,23 @@
         <link rel="icon" type="image/x-icon" href="pengu3.jpg">
     </head>
     <body>
-        <details id="theme_menu" class="theme_menu">
-            <summary for="theme_menu">Themes</summary>
-            <div>
-                <input id="light_radio" type="radio" name="theme" value="Light">
-                <label for="light_radio" style="color: darkgrey;">Light</label><br>
-
-                <input id="dark_radio" type="radio" name="theme" value="Dark">
-                <label for="dark_radio">Dark</label><br>
-                <button class="theme_submit_button" onclick="change_theme()">Change?</button>
+        <div class="top_stuff">
+            <div class="vowel_counter">
+                <input id="vowel_counter_input" type="text" placeholder="text">
+                <button onclick="count_vowels()">Submit</button>
             </div>
-        </details>
+            <details id="theme_menu" class="theme_menu">
+                <summary for="theme_menu">Themes</summary>
+                <div>
+                    <input id="light_radio" type="radio" name="theme" value="Light">
+                    <label for="light_radio" style="color: darkgrey;">Light</label><br>
+
+                    <input id="dark_radio" type="radio" name="theme" value="Dark">
+                    <label for="dark_radio">Dark</label><br>
+                    <button class="theme_submit_button" onclick="change_theme()">Change?</button>
+                </div>
+            </details>
+        </div>
         <h1 style="color: blue;">
             <span id="welcome_sign" class="rainbow rainbow_text_animated">Welcome</span><br>
             <img class="penguin_pfp" src="pengu3.jpg" alt="Description of the image" width="180" height="160"> <br>
@@ -28,7 +34,7 @@
             <a href="https://www.youtube.com/channel/UCnMoSQKpRVbL2jVzJVJFhVA" target="_blank">main channel</a>
             <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran" target="_blank">2nd channel</a><br>
             <form action="https://www.google.com/search" method="get" target="_blank">
-                <input style="height: 100%;" name="q" placeholder="search google" autocomplete="off">
+                <input name="q" placeholder="search google" autocomplete="off">
                 <button type="submit">Search</button>
             </form>
             <form action="https://www.youtube.com/results?" method="get" target="_blank"> 

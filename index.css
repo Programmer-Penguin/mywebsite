@@ -109,6 +109,16 @@ input
     font-size: calc(15px + 0.390625vw);
 }
 
+.top_stuff
+{
+    display: table;
+}
+
+.vowel_counter
+{
+    display: table-cell;
+}
+
 .theme_submit_button
 {
     font-size: calc(11px + 0.390625vw);
@@ -116,4 +126,5 @@ input
     border-color: black;
     background-color: black;
     border-radius: 78%;
+    display: table-cell;
 }
