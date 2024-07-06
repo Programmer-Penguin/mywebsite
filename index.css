@@ -106,6 +106,4 @@ input
     color: grey;
     text-align: left;
     font-size: calc(15px + 0.390625vw);
-    border: 2px solid blue;
-    border-radius: 25%
 }
