@@ -109,15 +109,18 @@ input
     font-size: calc(15px + 0.390625vw);
 }
 
-.top_stuff
+.top_stuff 
 {
-    display: table;
+    width:100%;
+    display: flex;
+    justify-content:space-between;
 }
 
 .vowel_counter
 {
-    display: table-cell;
+    order:1;
 }
+
 
 .theme_submit_button
 {
