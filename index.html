@@ -5,17 +5,22 @@
         <meta name="viewport" content="initial-scale=1, width=device-width">
         <link href="index.css" rel="stylesheet">
         <title>hello, title</title>
+        <link rel="icon" type="image/x-icon" href="pengu3.jpg">
     </head>
     <body>
-        <details class="theme_menu">
-            <summary>Themes</summary>
+        <details id="theme_menu" class="theme_menu">
+            <summary for="theme_menu">Themes</summary>
             <div>
-                <input id="light_radio" type="radio" name="theme" value="Light">Light<br>
-                <input id="dark_radio" type="radio" name="theme" value="Dark">Dark<br>
+                <input id="light_radio" type="radio" name="theme" value="Light">
+                <label for="light_radio" style="color: darkgrey;">Light</label><br>
+
+                <input id="dark_radio" type="radio" name="theme" value="Dark">
+                <label for="dark_radio">Dark</label><br>
+                <button class="theme_submit_button" onclick="change_theme()">Change?</button>
             </div>
         </details>
         <h1 style="color: blue;">
-            <p class="rainbow rainbow_text_animated">Welcome</p>
+            <span id="welcome_sign" class="rainbow rainbow_text_animated">Welcome</span><br>
             <img class="penguin_pfp" src="pengu3.jpg" alt="Description of the image" width="180" height="160"> <br>
             I am programmer penguin <br>
             <div class="website-counter">you have visited this site <span id="counter-value"></span> times</div>
@@ -36,6 +41,7 @@
             <button onclick="FizzBuzz()">begin fizzbuzz counter?</button>
             <button onclick="FB_reset()">Fizzbuzz reset?</button> <br>
             <span class="rainbow_text_animated" id="fizzbuzz_text"></span>
+            <span id="radio_result"></span>
         </h1>
     </body>
     <script src="index.js"></script>
