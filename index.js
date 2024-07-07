@@ -105,8 +105,8 @@ function change_theme()
         {
             link.style.color = "red";
         });
-        document.getElementsByClassName("top_stuff_buttons")[0].style.color = 'grey';
-        document.getElementsByClassName("penguin_pfp")[0].style.border = "5px solid blue";
+        document.getElementById("change_theme_button").style.color = "grey";
+        document.getElementsByClassName("penguin_pfp").style.border = "5px solid blue";
     }
     // else idk:
     else
