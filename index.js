@@ -165,4 +165,4 @@ class MyTopStuff extends HTMLElement
     }
 }
 
-customElements.define('my-top-stuff', MyTopStuff);
+customElements.define('my-top', MyTopStuff);
