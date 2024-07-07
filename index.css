@@ -116,15 +116,14 @@ input
     justify-content:space-between;
 }
 
-.vowel_counter
+.google_search
 {
     order:1;
 }
 
-
-.theme_submit_button
+.top_stuff_buttons
 {
-    font-size: calc(11px + 0.390625vw);
+    font-size: calc(8px + 0.390625vw);
     color: grey;
     border-color: black;
     background-color: black;

@@ -85,7 +85,7 @@ function change_theme()
             link.style.color = "#2a4b8d";
         });
         document.getElementsByClassName("theme_submit_button")[0].style.color = 'grey';
-        document.getElementById("welcome_sign").innerHTML = "";
+        document.getElementById("welcome_sign").innerHTML = "goodbye";
         document.getElementsByClassName("penguin_pfp")[0].style.border = "5px solid black";
     }
     // elif dark mode:
@@ -94,6 +94,7 @@ function change_theme()
         elements[0].style.backgroundColor = 'black';
         elements[1].style.color = 'blue';
 
+        // for each button, change color to blue and bg to black
         elements[2].forEach(function(button) 
         {
             button.style.color = 'blue';
@@ -104,7 +105,7 @@ function change_theme()
         {
             link.style.color = "red";
         });
-        document.getElementsByClassName("theme_submit_button")[0].style.color = 'grey';
+        document.getElementsByClassName("top_stuff_buttons")[0].style.color = 'grey';
         document.getElementsByClassName("penguin_pfp")[0].style.border = "5px solid blue";
     }
     // else idk:
@@ -113,3 +114,55 @@ function change_theme()
         console.log("idk man");
     }
 }
+
+async function count_vowels()
+{
+    let input_box = document.getElementById("vowel_counter_input")
+    let result = document.getElementById("V_counter_result")
+    let vowels = "aeiou";
+
+    let count = 0;
+    for (let c of input_box.value)
+    {
+        if (vowels.includes(c.toLowerCase()))
+        {
+            count++;
+        }
+    }
+    if (count > 1)
+    {
+        result.innerHTML = `There are ${count} vowels`;
+    }
+    else if (count == 1)
+    {
+        result.innerHTML = `There is ${count} vowel.`;
+    }
+    else
+    {
+        result.innerHTML = `There are no vowels.`;
+    }
+    await sleep(2000);
+    result.innerHTML = "";
+    input_box.value = "";
+}
+
+// my-custom-element.js
+class MyTopStuff extends HTMLElement
+{
+    constructor()
+    {
+      super();
+      const template = document.getElementById('my-top-stuff').content;
+      const shadowRoot = this.attachShadow({ mode: 'open' });
+
+      // Create a link element for your external CSS file (if needed)
+      const link = document.createElement('link');
+      link.setAttribute('rel', 'stylesheet');
+      link.setAttribute('href', 'index.css'); // Replace with the actual path to your CSS file
+      shadowRoot.appendChild(link);
+
+      shadowRoot.appendChild(template.cloneNode(true));
+    }
+}
+
+customElements.define('my-top-stuff', MyTopStuff);
