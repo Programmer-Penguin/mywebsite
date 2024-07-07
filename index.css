@@ -102,12 +102,7 @@ input
     border-radius: 35%;
 }
 
-.theme_menu
-{
-    color: grey;
-    text-align: left;
-    font-size: calc(15px + 0.390625vw);
-}
+
 
 .top_stuff 
 {
@@ -116,9 +111,23 @@ input
     justify-content:space-between;
 }
 
+.theme_menu
+{
+    color: grey;
+    text-align: left;
+    font-size: calc(15px + 0.390625vw);
+}
+
 .google_search
 {
     order:1;
+}
+
+.pages_menu
+{
+    color: grey;
+    text-align: left;
+    font-size: calc(15px + 0.390625vw);
 }
 
 .top_stuff_buttons
@@ -137,19 +146,10 @@ input
     padding: 0;
 }
 
-ul
-{
-    position: absolute;
-    top: 6%;
-    left: 3.5%;
-    transform: translate(-50%, -50%);
-
-}
-
 ul li
 {
     list-style: none;
-    float: left;
+    
 }
 
 ul li a
@@ -157,3 +157,4 @@ ul li a
     text-decoration: none;
     color: red;
 }
+
