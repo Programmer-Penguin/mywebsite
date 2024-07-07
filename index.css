@@ -140,7 +140,7 @@ input
 ul
 {
     position: absolute;
-    top: 5%;
+    top: 6%;
     left: 3.5%;
     transform: translate(-50%, -50%);
 
@@ -149,6 +149,7 @@ ul
 ul li
 {
     list-style: none;
+    float: left;
 }
 
 ul li a
