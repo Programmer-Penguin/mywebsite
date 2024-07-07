@@ -130,3 +130,29 @@ input
     border-radius: 78%;
     display: table-cell;
 }
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+ul
+{
+    position: absolute;
+    top: 5%;
+    left: 3.5%;
+    transform: translate(-50%, -50%);
+
+}
+
+ul li
+{
+    list-style: none;
+}
+
+ul li a
+{
+    text-decoration: none;
+    color: red;
+}

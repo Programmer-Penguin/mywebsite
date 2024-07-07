@@ -38,7 +38,7 @@ function sleep(ms)
 async function FizzBuzz()
 {
     document.getElementById("fizzbuzz_text").innerHTML = "";
-    await sleep(1000);
+    await sleep(200);
     for (let i = 0; i <= 100; i++)
     {
         let output = "";
@@ -146,23 +146,10 @@ async function count_vowels()
     input_box.value = "";
 }
 
-// my-custom-element.js
-class MyTopStuff extends HTMLElement
+document.getElementById("vowel_counter_input").addEventListener("keyup", function(event)
 {
-    constructor()
+    if (event.key === "Enter")
     {
-      super();
-      const template = document.getElementById('my-top-stuff').content;
-      const shadowRoot = this.attachShadow({ mode: 'open' });
-
-      // Create a link element for your external CSS file (if needed)
-      const link = document.createElement('link');
-      link.setAttribute('rel', 'stylesheet');
-      link.setAttribute('href', 'index.css'); // Replace with the actual path to your CSS file
-      shadowRoot.appendChild(link);
-
-      shadowRoot.appendChild(template.cloneNode(true));
+        count_vowels();
     }
-}
-
-customElements.define('my-top', MyTopStuff);
+});
