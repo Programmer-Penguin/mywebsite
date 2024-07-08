@@ -59,7 +59,7 @@ async function FizzBuzz()
         window.scrollTo(0, document.body.scrollHeight + 10);
     }
     document.getElementById('fizzbuzz_text').innerHTML += 'Buzz' + '<br>'; // Add a line break
-    document.getElementById('fizzbuzz_text').innerHTML += '<a href="#theme_menu" style="color: #107be5;">go back to the top?</a>'; // Add a line break
+    document.getElementById('fizzbuzz_text').innerHTML += `<a href="#theme_menu" style="color: blue;" onmouseover="this.style.color='blue';" onmouseout="this.style.color='#107be5';">go back to the top?</a>`; // Add a line break
     window.scrollTo(0, document.body.scrollHeight + 10);
 }
 function FB_reset()
@@ -155,3 +155,10 @@ document.getElementById("vowel_counter_input").addEventListener("keyup", functio
         count_vowels();
     }
 });
+
+// function elementFromHtml(html)
+// {
+//     const template = document.createElement("template");
+//     template.innerHTML = html.trip();
+//     return template.content.firstElementChild;
+// }
