@@ -21,6 +21,8 @@ button
 body
 {
     text-align: center;
+    font-size: calc(10px + 0.390625vw);
+
     background-color: black;
 }
 
