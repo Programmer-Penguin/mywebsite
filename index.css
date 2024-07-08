@@ -67,12 +67,6 @@ input
         width: 70%;
         height: auto;
     }
-
-    body
-    {
-        font-size: 16px;
-        white-space: nowrap;
-    }
 }
 
 .rainbow 
