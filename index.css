@@ -1,3 +1,14 @@
+body
+{
+    text-align: center;
+    background-color: black;
+}
+
+h1
+{
+    white-space: nowrap;
+}
+
 a
 {
     color: red;
@@ -18,11 +29,6 @@ button
     background-color: black;
 }
 
-body
-{
-    text-align: center;
-    background-color: black;
-}
 
 input
 {
