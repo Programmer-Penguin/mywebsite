@@ -21,8 +21,6 @@ button
 body
 {
     text-align: center;
-    font-size: calc(10px + 0.390625vw);
-
     background-color: black;
 }
 
@@ -63,9 +61,15 @@ input
 @media screen and (max-width: 767px) 
 {
     /* For screens up to 767px (mobile) */
-    .video-container iframe {
+    .video-container iframe 
+    {
         width: 70%;
         height: auto;
+    }
+
+    body
+    {
+        font-size: 16px;
     }
 }
 
