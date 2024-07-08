@@ -115,7 +115,7 @@ input
 {
     color: grey;
     text-align: left;
-    font-size: calc(20px + 0.390625vw);
+    font-size: calc(25px + 0.390625vw);
 }
 
 .google_search
