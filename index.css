@@ -115,7 +115,7 @@ input
 {
     color: grey;
     text-align: left;
-    font-size: calc(15px + 0.390625vw);
+    font-size: calc(20px + 0.390625vw);
 }
 
 .google_search
@@ -127,7 +127,7 @@ input
 {
     color: grey;
     text-align: left;
-    font-size: calc(15px + 0.390625vw);
+    font-size: calc(20px + 0.390625vw);
 }
 
 .top_stuff_buttons
