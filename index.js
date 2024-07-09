@@ -18,8 +18,13 @@ var visitCount = localStorage.getItem("page_view") || 1;
 visitCount = Number(visitCount) + 1;
 localStorage.setItem("page_view", visitCount);
 
-// Display the count
-document.getElementById("counter-value").innerHTML = visitCount;
+// Display the coun
+if (document.getElementById("counter-value"))
+{
+    document.getElementById("counter-value").innerHTML = visitCount;
+}
+
+
 
 // Reset the counter
 function resetCounter()
@@ -143,22 +148,27 @@ async function count_vowels()
     {
         result.innerHTML = `There are no vowels.`;
     }
-    await sleep(2000);
-    result.innerHTML = "";
-    input_box.value = "";
 }
 
-document.getElementById("vowel_counter_input").addEventListener("keyup", function(event)
-{
-    if (event.key === "Enter")
-    {
-        count_vowels();
-    }
-});
-
-// function elementFromHtml(html)
+// if (document.getElementById("vowel_counter_input"))
 // {
-//     const template = document.createElement("template");
-//     template.innerHTML = html.trip();
-//     return template.content.firstElementChild;
+//     document.getElementById("vowel_counter_input").addEventListener("keyup", function(event)
+//     {
+//         if (event.key === "Enter")
+//             count_vowels();
+//     });
 // }
+
+if (document.getElementById("vowel_counter_input"))
+{
+    document.addEventListener('DOMContentLoaded', function() 
+    {
+        let input = document.getElementById('vowel_counter_input');
+        input.addEventListener('keyup', function(event) 
+        {
+            count_vowels()
+        });
+    });
+
+}
+
