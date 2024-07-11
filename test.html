@@ -36,16 +36,18 @@
                     <li><a href="index.html">Main Page</a></li>
                     <li><a href="vowel.html">Vowel Counter</a></li>
                     <li><a href="fizzbuzz.html">Fizzbuzz</a></li>
-                    <li><a href="test.html">test</a></li>
                 </ul>
             </nav>
         </details>
         <h1 style="color: blue;">
             <img class="penguin_pfp" src="pengu3.jpg" alt="Description of the image" width="180" height="160"> <br>
-            <span id="vowel_counter_sign" class="vowel_counter_sign rainbow rainbow_text_animated">Vowel Counter.</span><br>
             <input size="25" id="vowel_counter_input" class="vowel_counter_input" type="text" placeholder="Vowel Counter." autofocus autocomplete="off"><br>
             <span id="V_counter_result"></span>
         </h1>
     </body>
-    <script src="index.js"></script>
+    <script>
+        function showChar(e) {
+          alert(`Key Pressed: ${e.key}\nCTRL key pressed: ${e.ctrlKey}\n`);
+        }
+      </script>
 </html> 
