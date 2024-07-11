@@ -166,3 +166,27 @@ ul li a:hover
     color: blue;
 }
 
+.websites_menu
+{
+    color: grey;
+    text-align: left;
+    font-size: calc(18px + 0.390625vw);
+}
+
+.websites_menu>summary 
+{
+    list-style: none;
+}
+.websites_menu>summary::-webkit-details-marker 
+{
+    display: none
+}
+
+.websites_menu>summary::before
+{
+    content: '▶';
+}
+.websites_menu[open]>summary::before
+{
+    content: "▼";
+}
