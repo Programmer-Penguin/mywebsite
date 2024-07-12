@@ -171,13 +171,3 @@ if (document.getElementById("vowel_counter_input"))
     });
 
 }
-fetch('desc.txt')
-    .then(response => response.text())
-    .then(description =>
-    {
-        document.getElementById('og-description').content = description;
-    })
-    .catch(error =>
-    {
-        console.error('Error fetching description:', error);
-    });
