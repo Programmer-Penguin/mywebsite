@@ -169,5 +169,102 @@ if (document.getElementById("vowel_counter_input"))
             count_vowels()
         });
     });
-
 }
+
+if (document.getElementById("currency_input"))
+    {
+        document.addEventListener('DOMContentLoaded', function() 
+        {
+            let input = document.getElementById('currency_input');
+            input.addEventListener('keyup', function(event) 
+            {
+                convert_currency();
+            });
+        });
+    }
+
+
+async function convert_currency()
+{
+    try
+    {
+
+        let first = document.getElementById("firstCurrencySelect").value; // value is pkr
+        let second = document.getElementById("secondCurrencySelect").value; // value is aud
+        let amount = document.getElementById("currency_input").value // value is 1
+        let output = document.getElementById("currency_output")
+
+        const response = await fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${first}.json`);
+        if (!response.ok)
+        {
+            throw new Error("Could'nt fetch resource.");
+        }
+        let data = await response.json()
+
+        output.innerHTML = amount * data[first][second];
+    }
+    catch (error)
+    {
+        console.error('Error fetching currency data:', error);
+    }
+}
+
+async function fetchFrom()
+{
+    try
+    {
+        const response = await fetch('https://www.floatrates.com/daily/aud.json');
+
+        if (!response.ok)
+        {
+            throw new Error("Could'nt fetch resource.");
+        }
+        const data = await response.json();
+
+        const selectElement = document.getElementById('firstCurrencySelect');
+        for (const currencyCode in data)
+        {
+            const option = document.createElement('option');
+            option.value = currencyCode;
+            option.style.fontSize = `calc(6px + 0.390625vw)`;
+            option.textContent = data[currencyCode].name;
+            selectElement.appendChild(option);
+        }
+    }
+    catch (error)
+    {
+        console.error('Error fetching currency data:', error);
+    }
+}
+
+fetchFrom();
+
+async function fetchTo() 
+{
+    try
+    {
+        const response = await fetch('https://www.floatrates.com/daily/usd.json');
+        if (!response.ok)
+        {
+                throw new Error("Could'nt fetch resource.");
+        }
+        const data = await response.json();
+
+        const selectElement = document.getElementById('secondCurrencySelect');
+        for (const currencyCode in data)
+        { 
+            var option = document.createElement('option');
+            option.value = currencyCode;
+            option.style.fontSize = `calc(6px + 0.390625vw)`;
+            option.textContent = data[currencyCode].name;
+            selectElement.appendChild(option);
+        }
+    } 
+    catch (error)
+    {
+        console.error('Error fetching currency data:', error);
+    }
+}
+
+fetchTo();
+
