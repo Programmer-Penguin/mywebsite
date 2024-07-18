@@ -211,7 +211,8 @@ async function convert_currency()
         let f_name2 = flo2_data[first]["name"];
         if (amount)
         {
-            output.innerHTML = `${amount} ${f_name2} converted to ${f_name} is ${n.toLocaleString()}`;
+            output.innerHTML = `${parseInt(amount).toLocaleString()} ${f_name2} converted to ${f_name} is ${n.toLocaleString()}`;
+            output.style.width = "calc(15px + 0.390625vw);"
         }
     }
     catch (error)

@@ -225,3 +225,8 @@ select::-webkit-scrollbar-track {
 {
     -webkit-appearance: none;
 }
+
+.currency_output
+{
+    font-size: calc(20px + 0.390625vw);
+}
