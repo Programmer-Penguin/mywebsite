@@ -194,14 +194,25 @@ async function convert_currency()
         let amount = document.getElementById("currency_input").value // value is 1
         let output = document.getElementById("currency_output")
 
-        const response = await fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${first}.json`);
-        if (!response.ok)
+        const cdn_res = await fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${first}.json`);
+        const flo_res = await fetch(`https://www.floatrates.com/daily/${first}.json`);
+        const flo_res2 = await fetch(`https://www.floatrates.com/daily/${second}.json`);
+
+        if (!cdn_res.ok && !flo_res.ok && !flo_res2.ok)
         {
             throw new Error("Could'nt fetch resource.");
         }
-        let data = await response.json()
+        let cdn_data = await cdn_res.json();
+        let flo_data = await flo_res.json();
+        let flo2_data = await flo_res2.json();
 
-        output.innerHTML = amount * data[first][second];
+        let n = amount * cdn_data[first][second];
+        let f_name = flo_data[second]["name"];
+        let f_name2 = flo2_data[first]["name"];
+        if (amount)
+        {
+            output.innerHTML = `${amount} ${f_name2} converted to ${f_name} is ${n.toLocaleString()}`;
+        }
     }
     catch (error)
     {
