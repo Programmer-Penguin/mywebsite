@@ -184,43 +184,6 @@ if (document.getElementById("currency_input"))
     }
 
 
-async function convert_currency()
-{
-    try
-    {
-
-        let first = document.getElementById("firstCurrencySelect").value; // value is pkr
-        let second = document.getElementById("secondCurrencySelect").value; // value is aud
-        let amount = document.getElementById("currency_input").value // value is 1
-        let output = document.getElementById("currency_output")
-
-        const cdn_res = await fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${first}.json`);
-        const flo_res = await fetch(`https://www.floatrates.com/daily/${first}.json`);
-        const flo_res2 = await fetch(`https://www.floatrates.com/daily/${second}.json`);
-
-        if (!cdn_res.ok && !flo_res.ok && !flo_res2.ok)
-        {
-            throw new Error("Could'nt fetch resource.");
-        }
-        let cdn_data = await cdn_res.json();
-        let flo_data = await flo_res.json();
-        let flo2_data = await flo_res2.json();
-
-        let n = amount * cdn_data[first][second];
-        let f_name = flo_data[second]["name"];
-        let f_name2 = flo2_data[first]["name"];
-        if (amount)
-        {
-            output.innerHTML = `${parseInt(amount).toLocaleString()} ${f_name2} converted to ${f_name} is ${n.toLocaleString()}`;
-            output.style.width = "calc(15px + 0.390625vw);"
-        }
-    }
-    catch (error)
-    {
-        console.error('Error fetching currency data:', error);
-    }
-}
-
 async function fetchFrom()
 {
     try
@@ -280,3 +243,52 @@ async function fetchTo()
 
 fetchTo();
 
+
+async function convert_currency()
+{
+    try
+    {
+        let first = document.getElementById("firstCurrencySelect").value; // value is pkr
+        let second = document.getElementById("secondCurrencySelect").value; // value is aud
+        let amount = document.getElementById("currency_input").value // value is 1
+        let output = document.getElementById("currency_output")
+
+        const cdn_res = await fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${first}.json`);
+        const flo_res = await fetch(`https://www.floatrates.com/daily/${first}.json`);
+        const flo_res2 = await fetch(`https://www.floatrates.com/daily/${second}.json`);
+
+        if (!cdn_res.ok && !flo_res.ok && !flo_res2.ok)
+        {
+            throw new Error("Could'nt fetch resource.");
+        }
+        let cdn_data = await cdn_res.json();
+        let flo_data = await flo_res.json();
+        let flo2_data = await flo_res2.json();
+
+        let n = amount * cdn_data[first][second];
+        let f_name = flo_data[second]["name"];
+        let f_name2 = flo2_data[first]["name"];
+        if (amount)
+        {
+            output.innerHTML = `${parseFloat(amount).toLocaleString()} ${f_name2} converted to ${f_name} is ${n.toLocaleString()}`;
+            output.style.width = "calc(15px + 0.390625vw);"
+        }
+    }
+    catch (error)
+    {
+        console.error('Error fetching currency data:', error);
+    }
+}
+
+function switch_options()
+{
+    let first = document.getElementById("firstCurrencySelect").value; // value is pkr
+    let second = document.getElementById("secondCurrencySelect").value; // value is aud
+
+    document.getElementById("currency_input").value = document.getElementById("currency_output").innerHTML.split(" ").pop();
+
+    document.getElementById("firstCurrencySelect").value = second;
+    document.getElementById("secondCurrencySelect").value = first;
+
+    convert_currency();
+}

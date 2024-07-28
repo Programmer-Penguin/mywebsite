@@ -1,2 +1,1 @@
-n = 1000.1
-print(f"{n:,}")
+print("my name is abubakar".split()[-1])

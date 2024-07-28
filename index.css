@@ -80,11 +80,11 @@ input
 
 .rainbow_text_animated 
 {
-    background: linear-gradient(to right, red, orange, yellow, #00ff00, blue, indigo, violet); 
+    background: linear-gradient(to right, blue, rgb(18, 18, 131), rgb(20, 13, 84), rgba(17, 0, 255, 0.523), blue);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    animation: rainbow_animation 1s infinite;
+    animation: rainbow_animation 4s infinite;
     background-size: 400% 100%;
 }
 
@@ -229,4 +229,10 @@ select::-webkit-scrollbar-track {
 .currency_output
 {
     font-size: calc(20px + 0.390625vw);
+}
+
+.switch
+{
+    color: white;
+    border-color: black;
 }
