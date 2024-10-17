@@ -1,35 +1,70 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
+
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currency Dropdown</title>
-</head>
-<body style="text-align: center;">
-    <select id="currencySelect" style="width: 150px;">
-        <option value="">Select currency</option>
-    </select>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <meta property="og:title" content="idk what to put here.">
+        <meta property="og:description" id="og-description" content="welcome to the website! I add random features on it.">
+        <meta property="og:image" content="https://master-gamer360.github.io/mywebsite/pengu3.jpg">
+        <meta property="og:url" content="https://master-gamer360.github.io/mywebsite/vowel.html">
 
-    <script>
-        async function fetchCurrencies() {
-            try {
-                const response = await fetch('https://www.floatrates.com/daily/aud.json');
-                const data = await response.json();
+        <link href="index.css" rel="stylesheet">
+        <title>idk what to put here :/</title>
+        <link rel="icon" type="image/x-icon" href="pengu3.jpg">
+    </head>
+    <body>
+        <header>
+            <div class="top_stuff">
+                <div class="channel_search">
+                    <form action="https://www.youtube.com/@ProgrammerPenguin/search?" method="get" target="_blank">
+                        <input name="query" placeholder="search my youtube vids">
+                        <button class="top_stuff_buttons" type="submit">Search</button>
+                    </form>
+                </div>
+                    <details id="theme_menu" class="theme_menu">
+                    <summary for="theme_menu">Themes</summary>
+                    <div>
+                        <input id="light_radio" type="radio" name="theme" value="Light">
+                        <label for="light_radio" style="color: darkgrey;">Light</label><br>
 
-                const selectElement = document.getElementById('currencySelect');
-                for (const currencyCode in data) {
-                    const option = document.createElement('option');
-                    option.value = currencyCode;
-                    option.style.fontSize = "10px"
-                    option.textContent = data[currencyCode].name;
-                    selectElement.appendChild(option);
-                }
-            } catch (error) {
-                console.error('Error fetching currency data:', error);
-            }
-        }
-
-        fetchCurrencies();
-    </script>
-</body>
-</html>
+                        <input id="dark_radio" type="radio" name="theme" value="Dark">
+                        <label for="dark_radio">Dark</label><br>
+                        <button id="change_theme_button" class="top_stuff_buttons" onclick="change_theme()">Change?</button>
+                    </div>
+                    <br>
+                </details>
+            </div>
+            <details class="pages_menu">
+                <summary>pages</summary>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Main Page</a></li>
+                        <li><a href="vowel.html">Vowel Counter</a></li>
+                        <li><a href="fizzbuzz.html">Fizzbuzz</a></li>
+                        <li><a href="exchange.html">Currency Converter</a></li>
+                    </ul>
+                </nav>
+            </details>
+            <details class="websites_menu">
+                <summary>my websites</summary>
+                <nav>
+                    <ul>
+                        <li><a target="_blank" href="https://master-gamer360.github.io/rubber-duck-debug/">Rubber Duck Debugging</a></li>
+                        <li><a target="_blank" href="https://master-gamer360.github.io/mywebsite/">testing site</a></li>
+                    </ul>
+                </nav>
+            </details>
+        </header>
+        <main>
+            <h1 style="color: blue;">
+                if 2d image was rotated in 3d
+            </h1>
+            <br>
+            <h1 style="color: blue;">
+                <img id="r_pfp" class="r_pfp" src="pengu3.jpg" alt="Description of the image"> <br>
+            </h1>
+        </main>
+    </body>
+    <script src="index.js"></script>
+</html> 
