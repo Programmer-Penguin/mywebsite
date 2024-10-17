@@ -18,7 +18,7 @@ var visitCount = localStorage.getItem("page_view") || 1;
 visitCount = Number(visitCount) + 1;
 localStorage.setItem("page_view", visitCount);
 
-// Display the coun
+// Display the counter
 if (document.getElementById("counter-value"))
 {
     document.getElementById("counter-value").innerHTML = visitCount;
