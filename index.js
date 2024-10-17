@@ -110,7 +110,7 @@ function change_theme()
  
         elements[3].forEach(function(link)
         {
-            link.style.color = "red";
+            link.style.color = "blue";
         });
         document.getElementById("change_theme_button").style.color = "grey";
         document.getElementsByClassName("penguin_pfp").style.border = "5px solid blue";

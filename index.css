@@ -2,7 +2,6 @@ body
 {
     text-align: center;
     background-color: black;
-    cursor: default;
 }
 
 a
@@ -79,9 +78,30 @@ input
     letter-spacing: 5px;
 }
 
-.rainbow_text_animated 
+.blue_text_animated 
 {
     background: linear-gradient(to right, blue, rgb(18, 18, 131), rgb(20, 13, 84), rgba(17, 0, 255, 0.523), blue);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: blue_animation 4s infinite;
+    background-size: 400% 100%;
+}
+
+@keyframes blue_animation 
+{
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
+
+.rainbow_text_animated 
+{
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -99,6 +119,7 @@ input
         background-position: 100% 0;
     }
 }
+
 
 .penguin_pfp
 {
@@ -122,6 +143,12 @@ input
     font-size: calc(25px + 0.390625vw);
 }
 
+.theme_menu:hover
+{
+    cursor: pointer;
+    color: lightgrey;
+}
+
 .channel_search
 {
     order:1;
@@ -132,6 +159,12 @@ input
     color: grey;
     text-align: left;
     font-size: calc(20px + 0.390625vw);
+}
+
+.pages_menu:hover
+{
+    cursor: pointer;
+    color: lightgray;
 }
 
 .top_stuff_buttons
@@ -171,6 +204,12 @@ ul li a:hover
     color: grey;
     text-align: left;
     font-size: calc(18px + 0.390625vw);
+}
+
+.websites_menu:hover
+{
+    cursor: pointer;
+    color: lightgrey;
 }
 
 
